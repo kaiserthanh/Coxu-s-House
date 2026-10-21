@@ -2,7 +2,7 @@
 
 Build in order. Each ticket ends with a commit and a quick test; networked tickets are tested with two players (Multiplayer Play Mode, then a real build plus the editor).
 
-- [ ] **T1 Project setup**: Unity 6.3 LTS project, URP, packages, Git LFS. *Done when* a fresh clone opens and plays the empty `Graybox_House` scene. (Steps in `README.md`.)
+- [x] **T1 Project setup**: Unity 6 project, URP, packages, Git LFS. *Done when* a fresh clone opens and plays the empty `Graybox_House` scene. (Steps in `README.md`.)
 - [ ] **T2 Local movement**: first-person walk, look, sprint. *Done when* you can cross every room without snagging.
 - [ ] **T3 Local interaction**: raycast prompt, a door that opens and closes. *Done when* the prompt shows only within 2 m.
 - [ ] **T4 Host and Join**: bootstrap UI, player spawning. *Done when* a build and the editor connect on one PC and see each other move.

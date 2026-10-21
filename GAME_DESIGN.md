@@ -12,7 +12,7 @@
 | Episode 1 | Friends arrive for Coxu's birthday, the house comes alive, they escape a monstrous version of it |
 | Signature reference | Coxu's dad's "radioactive" pizza. Its exact role is open |
 | Presentation | Standalone 3D first-person, closer to R.E.P.O. / Lethal Company than Roblox |
-| Engine and network | Unity 6 LTS, URP, Netcode for GameObjects 2.x, Unity Transport. LAN first, Unity Relay after M0 |
+| Engine and network | Unity 6 (currently 6.6), URP, Netcode for GameObjects 2.x, Unity Transport. LAN first, Unity Relay after M0 |
 | Authority | Host owns story phase, objectives, doors, items, enemies. Each player owns their own movement |
 | Incident trigger | A player interacting with the pizza; the house triggers it anyway after about 6 minutes |
 
