@@ -6,10 +6,10 @@ Private project. Do not share builds or house details publicly without Coxu's pe
 
 ## Stack
 
-- Unity 6.3 LTS (editor `6000.3.x`), Universal Render Pipeline
+- Unity 6.6 (editor `6000.6.6f1`, pinned in `ProjectSettings/ProjectVersion.txt`), Universal Render Pipeline
 - Netcode for GameObjects 2.13.3 (pulls in Unity Transport)
 - Input System 1.20.1
-- Multiplayer Play Mode 2.0.2 for testing several players in one editor
+- Multiplayer Play Mode 3.0.0 for testing several players in one editor
 
 Package versions live in `Packages/manifest.json`. Check them against the Package Manager when you first open the project.
 
@@ -18,8 +18,8 @@ Package versions live in `Packages/manifest.json`. Check them against the Packag
 This repo starts with the packages, folders and docs but no generated Unity settings. Do this once:
 
 1. Install Git LFS (`git lfs install`), then clone the repo.
-2. In Unity Hub, install the current **Unity 6.3 LTS** editor if you don't have it.
-3. Unity Hub > **Add** > **Add project from disk** > pick the cloned folder. Open it with 6.3 LTS. Unity creates `ProjectSettings/` and downloads packages. If the Package Manager reports a version it can't find, accept the version it suggests.
+2. In Unity Hub, install the editor version in `ProjectSettings/ProjectVersion.txt` if you don't have it.
+3. Unity Hub > **Add** > **Add project from disk** > pick the cloned folder. Open it with that editor version. Unity creates `ProjectSettings/` and downloads packages. If the Package Manager reports a version it can't find, accept the version it suggests.
 4. If Unity asks to enable the new Input System backend and restart, say **Yes**.
 5. Set up URP:
    - Project window: right-click `Assets/_Project` > Create > Folder `Settings`.
@@ -30,7 +30,7 @@ This repo starts with the packages, folders and docs but no generated Unity sett
 7. Create two empty scenes in `Assets/_Project/Scenes`: `Boot` and `Graybox_House`. Add both to File > Build Profiles (Boot first).
 8. Commit everything Unity generated (`Assets/`, `Packages/`, `ProjectSettings/`), including `ProjectSettings/ProjectVersion.txt` so everyone uses the same editor.
 
-**T1 is done when** a fresh clone opens in 6.3 LTS without errors and plays the empty `Graybox_House` scene.
+**T1 is done when** a fresh clone opens without errors and plays the empty `Graybox_House` scene.
 
 ## Docs
 
@@ -40,3 +40,9 @@ This repo starts with the packages, folders and docs but no generated Unity sett
 - `CONVENTIONS.md`: code and folder rules, for people and coding agents
 
 The full design brief (v0.1) and the GDD v0.2 doc are the source of truth; these files are the working cut.
+
+## Graybox house
+
+Open `Graybox_House`, then run **Coxu > Build Graybox House**. It builds placeholder rooms (living room, hallway, utility room, porch), lights, the pizza table, breaker box and spawn markers from primitives, and places the player. Save the scene afterwards. Re-running it replaces the previous build, so change the layout in `Assets/_Project/Editor/GrayboxBuilder.cs` rather than by hand.
+
+Controls: WASD move, mouse look, Shift sprint, Esc frees the mouse, click to take it back.
